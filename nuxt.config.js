@@ -29,6 +29,7 @@ export default defineNuxtConfig({
   modules: [
     "@vueuse/nuxt", // VueUse 工具库
     "@nuxt/image", // Nuxt 图像优化模块
+    '@unocss/nuxt', // 启用 UnoCSS 模块
   ],
 
   // 插件配置

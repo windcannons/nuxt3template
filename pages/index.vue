@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>
+    <h1 class="bg-red text-20">
       新闻列表</h1>
     <ul>
       <li
@@ -59,13 +59,6 @@
 
   <!--  全局事件总线-->
     <el-button type="primary" @click="transferData">全局事件总线</el-button>
-
-  <!--  element plus-->
-    <div>
-      <el-button :icon="Search" circle />
-      <el-button type="primary" :icon="Edit" circle />
-      <el-button type="success" :icon="Check" circle />
-    </div>
   </div>
 </template>
 
