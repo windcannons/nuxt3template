@@ -61,7 +61,7 @@
 │          vue-shim.d.ts      # Vue 的 shim 文件类型定义
 
 ├─api                          # API 文件夹，定义前后端交互的 API 函数
-│  │  http.js                  # HTTP 请求配置，定义基于 Fetch 的请求方法
+│  │  request.js                  # HTTP 请求配置，定义基于 Fetch 的请求方法
 │  └─list
 │          getNewsList.js      # 数据获取的 API 函数，例：获取新闻列表
 
