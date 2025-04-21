@@ -62,7 +62,8 @@ export default defineNuxtConfig({
   },
 
   // 开启服务器端渲染模式
-  ssr: true, // 启用 SSR
+  // 启用 SSR
+  ssr: true,
 
   // Vue 特定配置
   vue: {
@@ -72,7 +73,8 @@ export default defineNuxtConfig({
   },
 
   // 禁用遥测功能
-  telemetry: false, // 禁用 Nuxt 遥测数据收集
+  // 禁用 Nuxt 遥测数据收集
+  telemetry: false,
 
   // 自动导入功能配置
   imports: {
@@ -83,4 +85,6 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false, // 禁用开发者工具
   },
+
+  compatibilityDate: "2025-04-17",
 });
