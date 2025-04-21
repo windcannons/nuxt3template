@@ -4,7 +4,7 @@ import { useCookie } from 'nuxt/app';
 
 // 请求地址
 const BASE_URL = 'https://admin.nimbusyun.com';
-export const requests = {
+export const Request = {
   get: async (url, params) => {
     const cookie = useCookie('cookie');
     return await $fetch(`${BASE_URL}${url}`, {

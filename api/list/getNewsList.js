@@ -1,7 +1,7 @@
 import {
-    requests
+  Request
 } from "../request.js";
 
 export let getNewsList = (data)=>{
-    return requests.get(`/api/owNews/getNewsList`,data)
+    return Request.get(`/api/owNews/getNewsList`,data)
 }
