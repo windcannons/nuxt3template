@@ -6,9 +6,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "zh-CN", // 设置 HTML 标签的语言
       },
-      link: [
-        // 可在此添加外部样式或图标链接
-      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
     },
   },
 
@@ -23,6 +21,7 @@ export default defineNuxtConfig({
     "./assets/swiper.css", // Swiper 轮播样式
     "~/assets/css/index.less", // 项目全局样式
     "element-plus/dist/index.css", // Element Plus 样式
+    "element-plus/theme-chalk/dark/css-vars.css",// Element Plus 全局样式
   ],
 
   // 引入 Nuxt 模块
