@@ -36,12 +36,7 @@
 import {
   useExampleStore
 } from "../store/example.js";
-import MySwiper
-  from "../components/mySwiper.vue";
-import MyEcharts
-  from "../components/myEcharts.vue";
-import MyLanguage
-  from "../components/myLanguage.vue";
+
 import { useNuxtApp } from '#app';
 
 // 服务器渲染

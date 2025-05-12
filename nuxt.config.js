@@ -3,9 +3,22 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/", // 基础路径
     head: {
+      title: '默认网站标题', // 全局默认标题
       htmlAttrs: {
-        lang: "zh-CN", // 设置 HTML 标签的语言
+        lang: "zh-CN" // 设置 HTML 标签的语言
       },
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: '网站介绍。'
+        }
+      ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
     },
   },
@@ -80,10 +93,10 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
     dirs: [
-      "composables",
       "utils",
       "stores",
-      "api/list"
+      "api/list",
+      "components"
     ]
   },
 
