@@ -10,9 +10,10 @@ export default defineNuxtConfig({
     },
   },
 
+
   // 构建配置
   build: {
-    transpile: [/echarts/], // 将 echarts 进行转译处理
+    transpile: [/echarts/,"vue"], // 将 echarts 进行转译处理
   },
 
   // 全局引入 CSS 文件
@@ -77,7 +78,13 @@ export default defineNuxtConfig({
 
   // 自动导入功能配置
   imports: {
-    autoImport: false, // 关闭自动导入功能
+    autoImport: true,
+    dirs: [
+      "composables",
+      "utils",
+      "stores",
+      "api/list"
+    ]
   },
 
   // 开发工具配置

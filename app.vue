@@ -1,8 +1,10 @@
 <template>
-  <NuxtLayout>
+  <div class="max-w-screen overflow-hidden">
+    <NuxtLayout>
       <Header></Header>
-    <NuxtPage />
-  </NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

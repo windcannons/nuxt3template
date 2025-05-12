@@ -1,45 +1,14 @@
 <template>
   <div>
-    <h1 class="bg-red text-20">
-      新闻列表</h1>
-    <ul>
-      <li
-        v-for="(news, index) in newsListData.data"
-        :key="news.id"
-        class="news-item"
-        data-aos="fade-left"
-        :data-aos-delay="index * 50"
-      >
-        <img
-          :src="`https://admin.nimbusyun.com${news.iconUrl}`"
-          alt="新闻图标"
-          class="news-icon" />
-        <h2>
-          {{
-            news.title
-          }}</h2>
-        <div
-          v-html="news.profiles"></div>
-        <p>
-          标签:
-          {{
-            news.tagsName
-          }}</p>
-        <p>
-          创建时间:
-          {{
-            news.created
-          }}</p>
-      </li>
-    </ul>
-
     <!--  国际化-->
     <my-language></my-language>
 
     <!--pinia-->
     <div style="margin: 20px 0;">
-      <h1>
-        示例组件</h1>
+      <h1
+        data-aos="fade-left"
+        :data-aos-delay="index * 50">
+        aos动画</h1>
       <p>
         当前计数器值:
         {{
@@ -65,12 +34,6 @@
 <script
   setup>
 import {
-  useAsyncData,
-} from 'nuxt/app';
-import {
-  getNewsList
-} from '../api/list/getNewsList.js';
-import {
   useExampleStore
 } from "../store/example.js";
 import MySwiper
@@ -79,20 +42,16 @@ import MyEcharts
   from "../components/myEcharts.vue";
 import MyLanguage
   from "../components/myLanguage.vue";
-import { useNuxtApp } from '#app'; // 导入 useNuxtApp
-import { Search, Edit, Check } from '@element-plus/icons-vue'
+import { useNuxtApp } from '#app';
 
-// 获取新闻列表
-const {
-  data: newsListData,
-} = await useAsyncData('newsList', () =>
-  getNewsList({
-    site: 1,
-    limit: 3,
-    offset: 0
-  })
-);
-console.log(newsListData);
+// 服务器渲染
+//const {
+//  data: newsListData,
+//} = await useAsyncData('newsList', () =>
+//// 改为请求接口数据
+//  ()=>{}
+//);
+//console.log(newsListData);
 
 
 // 创建一个方法来增加计数器
@@ -111,18 +70,6 @@ const transferData = ()=>{
 
 <style
   scoped>
-.news-item {
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.news-icon {
-  max-width: 100%;
-  height: auto;
-}
-
 img {
   width: 40px;
 }
