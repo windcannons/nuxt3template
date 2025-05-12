@@ -4,7 +4,7 @@ import { useCookie } from 'nuxt/app';
 // 请求地址
 const BASE_URL = 'http://192.168.2.130:11000';
 
-export const Request = {
+export default Request = {
   get: (url, params) => {
     const cookie = useCookie('cookie');
     return new Promise((resolve, reject) => {
