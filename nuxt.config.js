@@ -77,6 +77,11 @@ export default defineNuxtConfig({
   // 开启服务器端渲染模式
   // 启用 SSR
   ssr: true,
+  target: 'static',
+  nitro: {
+    preset: 'static'
+  },
+
 
   // Vue 特定配置
   vue: {
